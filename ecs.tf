@@ -4,7 +4,7 @@ resource "aws_ecs_cluster" "main" {
   name = "cb-cluster"
 }
 data "aws_ecr_image" "service_image" {
-  repository_name = "int-demo"
+  repository_name = "test"
   image_tag       = "latest"
 }
 
