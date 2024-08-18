@@ -7,7 +7,7 @@ data "aws_ecr_image" "service_image" {
   repository_name = "int-demo"
   image_tag       = "latest"
 }
-output "ecr-image-id" {
+output "ecr-image-uri" {
     value = data.aws_ecr_image.service_image.image_uri
 }
 
