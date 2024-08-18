@@ -2,20 +2,22 @@
 
 variable "aws_region" {
   description = "The AWS region things are created in"
-  default     = "us-east-1"
+  default     = "us-west-2"
 }
 
 variable "ecs_task_execution_role_name" {
   description = "ECS task execution role name"
   default = "myEcsTaskExecutionRole"
 }
-variable "app_image" {
-  name = "Number of AZs to cover in a given region"
-  default     = "891376972409.dkr.ecr.us-east-1.amazonaws.com/int-demo:latest"
-}
+
 variable "az_count" {
   description = "Number of AZs to cover in a given region"
   default     = "2"
+}
+
+variable "app_image" {
+  description = "Docker image to run in the ECS cluster"
+  default     = "891376972409.dkr.ecr.us-east-1.amazonaws.com/int-demo:latest"
 }
 
 variable "app_port" {
@@ -25,7 +27,7 @@ variable "app_port" {
 
 variable "app_count" {
   description = "Number of docker containers to run"
-  default     = 1
+  default     = 3
 }
 
 variable "health_check_path" {
@@ -41,4 +43,3 @@ variable "fargate_memory" {
   description = "Fargate instance memory to provision (in MiB)"
   default     = "2048"
 }
-
