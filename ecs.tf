@@ -7,6 +7,9 @@ data "aws_ecr_image" "service_image" {
   repository_name = "int-demo"
   image_tag       = "latest"
 }
+output "ecr-image-id" {
+    value = data.aws_ecr_image.service_image.id
+}
 
 data "template_file" "cb_app" {
   template = file("./templates/ecs/cb_app.json.tpl")
