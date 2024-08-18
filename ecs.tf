@@ -15,7 +15,7 @@ data "template_file" "cb_app" {
   template = file("./templates/ecs/cb_app.json.tpl")
 
   vars = {
-    app_image      = data.aws_ecr_image.service_image.image_uri
+    app_image      = 891376972409.dkr.ecr.us-east-1.amazonaws.com/int-demo:latest
     app_port       = var.app_port
     fargate_cpu    = var.fargate_cpu
     fargate_memory = var.fargate_memory
