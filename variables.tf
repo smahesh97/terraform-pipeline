@@ -9,7 +9,10 @@ variable "ecs_task_execution_role_name" {
   description = "ECS task execution role name"
   default = "myEcsTaskExecutionRole"
 }
-
+variable "app_image" {
+  name = "Number of AZs to cover in a given region"
+  default     = "891376972409.dkr.ecr.us-east-1.amazonaws.com/int-demo:latest"
+}
 variable "az_count" {
   description = "Number of AZs to cover in a given region"
   default     = "2"
