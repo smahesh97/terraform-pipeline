@@ -8,7 +8,7 @@ data "aws_ecr_image" "service_image" {
   image_tag       = "latest"
 }
 output "ecr-image-id" {
-    value = data.aws_ecr_image.service_image.id
+    value = data.aws_ecr_image.service_image.image_uri
 }
 
 data "template_file" "cb_app" {
