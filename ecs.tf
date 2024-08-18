@@ -7,7 +7,7 @@ data "template_file" "cb_app" {
   template = file("./templates/ecs/cb_app.json.tpl")
 
   vars = {
-    app_image      = var.image-name
+    app_image      = var.app_image
     app_port       = var.app_port
     fargate_cpu    = var.fargate_cpu
     fargate_memory = var.fargate_memory
